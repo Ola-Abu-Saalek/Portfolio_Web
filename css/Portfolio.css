@@ -246,7 +246,7 @@ form{
 
 
 /* Base styles for laptop and desktop */
-@media (min-width: 1024px) {
+@media (min-width: 3000px) {
     .projects-container {
         display: flex;
         justify-content: space-around;
