@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 header{
     background-color:#201E43;
@@ -25,7 +26,6 @@ nav{
 .modify_bar a:hover {
     background-color: #134B70;
 }
-/****************************************/
 .photo {
     position: absolute;
     right: 0.1px;
@@ -37,7 +37,6 @@ nav{
     top:19px;
     left: 24px;
 }
-/*******************/
 .headline {
     font-family: 'Lilita One', cursive;
 }
@@ -51,7 +50,7 @@ nav{
     font-size: 15px;
     color: white;
 }
-/**********************/
+
 .container {
     text-align: center;
     margin-right: 710px;
@@ -75,7 +74,7 @@ nav{
 .download-btn:hover{
     background-color: #f77f93 ;
 }
-/***********************/
+
 .download-btn:active{
     background-color: #f77f93 ;
     box-shadow: 0 5px #666;
@@ -102,7 +101,7 @@ nav{
     transform-origin: center; 
     top: 1072px;
 }
-/*****************************/
+
 .background{
     background-color:#201E43;
 }
@@ -149,7 +148,7 @@ nav{
     font-family: 'Lilita One', cursive;
     font-size:30px;
 }
-/*********************************/
+
 .backgroundcontact2{
     background-color: rgba(221, 212, 212, 0.281); 
     padding:20px 0 70px 0 ;
@@ -189,7 +188,7 @@ input[type=submit]:hover {
 form{
     border-radius: 5px;
     background-color: #f2f2f2;
-    /*padding: 20px;*/
+    
     padding:30px 0 0 40px;
     width: 800px; 
     margin-left: 299px;
@@ -205,7 +204,7 @@ form{
     height:100px;
     width:800px;
 }
-/**************************************/
+
 .backgroundcontact{
     background-color: #201E43;
     display:flex;
@@ -243,4 +242,109 @@ form{
 }
 .icon-link:hover {
     color: #93a1a1; 
+}
+
+
+/* Base styles for laptop and desktop */
+@media (min-width: 1024px) {
+    .projects-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .photo, .ai {
+        display: block;
+    }
+    form {
+        width: 800px;
+        margin-left: 299px;
+    }
+    .robot_move, .robot_move3 {
+        transform: scale(0.6);
+    }
+}
+/* Tablet styles (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .project-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .Me {
+        margin-right: 0;
+        margin-top: 100px;
+        font-size: 18px;
+    }
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .download-btn {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+    .robot_move, .robot_move3 {
+        display: none;
+    }
+    .photo {
+        top: 100px;
+    }
+    .ai {
+        left: 10px;
+    }
+}
+/* Mobile styles (up to 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 0 0 100px 0;
+    }
+    .modify_bar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .photo, .ai {
+        display: none;
+    }
+    .Me {
+        margin: 50px auto;
+        font-size: 16px;
+    }
+    .container {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    input[type=submit], input[type=text], #subject {
+        width: 100%;
+    }
+    .backgroundcontact, .backgroundcontact2 {
+        text-align: center;
+    }
+    .tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+    }
+    .backgroundcontact {
+        display: block;
+        padding: 20px;
+    }
 }
